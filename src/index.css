@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-canvas: #0B0D17;
+  --color-surface: #131728;
+  --color-elevated: #1A1F35;
+  --color-accent: #A5F51F;
+  --color-accent-hover: #93E012;
+  --color-text-secondary: #B8BED4;
+  --color-text-muted: #7F87A3;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #0B0D17;
+    color: #FFFFFF;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #0B0D17;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Precision architectural grid pattern */
+.arch-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Subtle restrained atmospheric wash for AI engineering stage */
+.ai-stage-glow {
+  background:
+    radial-gradient(60% 50% at 70% 25%, rgba(99, 102, 241, 0.14) 0%, rgba(11, 13, 23, 0) 70%),
+    radial-gradient(40% 40% at 25% 80%, rgba(165, 245, 31, 0.06) 0%, rgba(11, 13, 23, 0) 70%);
+}
+
+/* Custom thin dark scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0D17;
+}
+::-webkit-scrollbar-thumb {
+  background: #252B45;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #363F64;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

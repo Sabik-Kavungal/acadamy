@@ -1,0 +1,6 @@
+{
+  "name": "AxiomDev Academy",
+  "description": "Learn modern software and AI engineering through practical, industry-focused courses. Build real-world applications and prepare for your next career opportunity.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
